@@ -6,7 +6,7 @@ A JavaScript plugin to share stories to Facebook's wall
 This is an interface component for websites and Facebook applications which allows your users to make a selection of one of their friend or themself to share stories on the wall. The friend is returned as an array of Facebook ID.
 It is similar to the `fb:multi-friend-selector` component by Facebook, except it can be used to select friends for anything, not just application requests.
 
-![This is what it looks like.](http://playground.thesedays.com/tdfriendselector/screenshot-20110608.png)
+![This is what it looks like.](http://oleksandrvladymyrov.github.io/FBShareDialog/pic/design.png)
 
 ## Viewing the example
 
@@ -60,10 +60,7 @@ Just edit `example.js` and set your Facebook `appId`.
 
 5 - According to the dimension(width) of browser's window there are two options of design. We called it desktop and mobile. The desktop design will automatically deployed with width of browser's window >=768px otherwise will be deployed mobile design. The mobile design is oriented to use with touchscreen interface, but can be used on desktop as well.
 
-Desktop design
-![This is what it looks like.](http://playground.thesedays.com/tdfriendselector/screenshot-20110608.png)
-
-Mobile design
-![This is what it looks like.](http://playground.thesedays.com/tdfriendselector/screenshot-20110608.png)
+Desktop design                      Mobile design
+![This is what it looks like.](http://oleksandrvladymyrov.github.io/FBShareDialog/pic/design.png)
 
 6 - 
