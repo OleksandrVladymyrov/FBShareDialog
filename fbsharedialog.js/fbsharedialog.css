@@ -1,0 +1,294 @@
+/*
+ * FaceBook Share Dialog
+ * @author Oleksandr Vladymyrov
+ */
+
+#FBShareDialog {
+    display: none;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 1000;
+    color: #333;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+#FBShareDialog a, #FBShareDialog a:active, #FBShareDialog a:hover, #FBShareDialog a:visited {
+    text-decoration: none;
+    color: #3B5998;
+}
+
+#FBShareDialog .FBShareDialog_friendsContainer a:hover {
+    background-color: rgb(216, 223, 234);
+}
+
+#FBShareDialog p, #FBShareDialog ul, #FBShareDialog li {
+    margin: 0;
+    padding: 0
+}
+
+#FBShareDialog li {
+    list-style-type: none
+}
+
+#FBShareDialog .FBShareDialog_clearfix:before, #FBShareDialog .FBShareDialog_clearfix:after {
+    content: "";
+    display: table
+}
+
+#FBShareDialog .FBShareDialog_clearfix:after {
+    clear: both
+}
+
+#FBShareDialog .FBShareDialog_clearfix {
+    zoom: 1
+}
+
+#FBShareDialog .FBShareDialog_dialog {
+    padding: 10px;
+    position: relative;
+    background: rgba(82, 82, 82, 0.7);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    overflow-y: hidden;
+
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_button {
+    z-index: 13;
+    position: absolute;
+    top: 17px;
+    font-size: 12px;
+
+}
+
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonOK,
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonOK:active,
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonOK:hover,
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonOK:visited {
+    color: #FFF
+}
+
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonClose,
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonClose:active,
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonClose:hover,
+#FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonClose:visited {
+    color: #FFF
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_form {
+    border: 1px solid #3B5998
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_header {
+
+    padding: 7px 5px;
+    color: #FFF;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    height: 29px;
+    line-height: 28px;
+    text-align: center;
+
+    background: #738aba; /* Old browsers */
+    background: -moz-linear-gradient(top, #738aba 0%, #2c4987 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#738aba), color-stop(100%,#2c4987)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #738aba 0%,#2c4987 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #738aba 0%,#2c4987 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #738aba 0%,#2c4987 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #738aba 0%,#2c4987 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#738aba', endColorstr='#2c4987',GradientType=0 ); /* IE6-9 */
+
+
+    border-bottom: 1px solid;
+    border-color: rgb(17, 26, 51);
+
+    -webkit-box-shadow: inset 0 1px 1px -1px #fff;
+    -moz-box-shadow: inset 0 1px 1px -1px #fff;
+    box-shadow: rgb(255, 255, 255) 0px 1px 1px -1px inset;
+
+    display: block;
+
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+
+    text-shadow: 0 -1px 0 rgba(0, 30, 84, 0.3);
+    cursor: default;
+
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_content {
+    background: #FFF;
+    padding: 0;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_searchContainer {
+    padding: 10px 12px 10px 10px;
+    background: #f1f1f1;
+    border: solid #cacaca;
+    border-width: 1px 0
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_searchContainer .FBShareDialog_selectedNameContainer {
+    font-weight: bold;
+    float: left;
+    padding: 3px 0;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_searchContainer #FBShareDialog_searchField {
+    float: right;
+    width: 100%;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer {
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer .FBShareDialog_friend {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #cacaca;
+    cursor: pointer
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer .FBShareDialog_friend .FBShareDialog_friendAvatar {
+    float: left;
+    height: 50px;
+    width: 50px
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer .FBShareDialog_friend .FBShareDialog_friendName {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 17px 0 17px 10px;
+    margin-left: 50px;
+    position: relative;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer .FBShareDialog_friend.FBShareDialog_friendSelected {
+    background: rgb(216, 223, 234);
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer .FBShareDialog_friend.FBShareDialog_friendDisabled {
+    cursor: default;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer .FBShareDialog_friend.FBShareDialog_friendFiltered {
+    display: none;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_content .FBShareDialog_Iframe .FBShareDialog_Iframe_loading {
+    display: none;
+    height: 100%;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_content .FBShareDialog_Iframe .FBShareDialog_Iframe_loading img {
+    margin: 0 auto;
+    display: block;
+}
+
+#FBShareDialog .FBShareDialog_dialog .FBShareDialog_content .FBShareDialog_Iframe .FBShareDialog_Iframe_loading iframe {
+    display: block;
+}
+
+@media (max-width:767px) {
+
+    #FBShareDialog .FBShareDialog_dialog {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    #FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer {
+        display: block !important;
+        height: 10000px;
+    }
+
+    #FBShareDialog .FBShareDialog_dialog .FBShareDialog_button {
+
+        background: #647aab; /* Old browsers */
+        background: -moz-linear-gradient(top,  #647aab 0%, #2c467e 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#647aab), color-stop(100%,#2c467e)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #647aab 0%,#2c467e 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #647aab 0%,#2c467e 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #647aab 0%,#2c467e 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #647aab 0%,#2c467e 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#647aab', endColorstr='#2c467e',GradientType=0 ); /* IE6-9 */
+
+        box-shadow: rgba(0, 0, 0, 0.21) 0px 1px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 0px 0px;
+        box-sizing: border-box;
+
+        border: 1px solid;
+        border-color: rgb(42, 51, 73) rgb(42, 58, 100) rgb(37, 54, 98) rgb(42, 58, 100);
+        border-radius: 4px;
+
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        font-weight: bold;
+        font-family: sans-serif;
+        letter-spacing: normal;
+        line-height: 27px;
+        margin: 0;
+
+        max-width: 85px;
+        min-width: 50px;
+        overflow: hidden;
+        padding: 0px 8px;
+
+        text-align: center;
+        text-indent: 0px;
+        text-overflow: ellipsis;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, .35);
+        text-transform: none;
+        white-space: nowrap;
+        word-spacing: 0px;
+
+    }
+
+    #FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonClose {
+        left: 15px;
+    }
+
+    #FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonOK {
+        right: 15px;
+    }
+}
+
+@media (min-width:768px) {
+    #FBShareDialog {
+        margin: 10px 0 ;
+    }
+
+    #FBShareDialog .FBShareDialog_dialog {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    #FBShareDialog .FBShareDialog_dialog #FBShareDialog_buttonClose {
+        top: 19px;
+        right: 19px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    #FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer {
+        height: 520px;
+    }
+}
