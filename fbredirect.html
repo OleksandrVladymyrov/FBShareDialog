@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/js/jquery/jquery.js" ></script>
+</head>
+<body>
+
+<script>
+
+    var parseQueryString = function( queryString ) {
+        var params = {}, queries, temp, i, l;
+
+        // Split into key/value pairs
+        queries = queryString.substring(queryString.indexOf('?') + 1).split("&");
+
+        // Convert the array of strings into an object
+        for ( i = 0, l = queries.length; i < l; i++ ) {
+            temp = queries[i].split('=');
+            params[temp[0]] = temp[1];
+        }
+        return params;
+    };
+
+    parsedURI = parseQueryString(decodeURIComponent(window.location.search));
+
+    if ( window.self === window.top ) {
+//        not in a frame
+        alert('not in a frame');
+    } else {
+//        in a frame
+        if (parsedURI.idDialog) {
+            if (parsedURI.post_id) {
+                document.write();
+                window.parent.$(parsedURI.idDialog + ' iframe')
+                    .trigger('TD:iframe', {status    : 'posted',
+                        fb_answer : {post_id : parsedURI.post_id}
+                    });
+            } else {
+                window.parent.$(parsedURI.idDialog + ' iframe').trigger('FBShareDialog:iframe', {status: 'canceled'});
+            }
+        } else {
+            alert('Missing incoming data');
+        }
+    }
+
+</script>
+
+</body>
+</html>

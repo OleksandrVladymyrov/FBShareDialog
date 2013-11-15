@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Oleksandr Vladymyrov">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>FaceBook share dialog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="/js/jquery/jquery.js" ></script>
+    <script src="bootstrap/dist/js/bootstrap.js" ></script>
+    <script src="/fbsharedialog.js/fbsharedialog.js"></script>
+    <link href="/fbsharedialog.js/fbsharedialog.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+  <div id="info"></div>
+  <div id="fb-root"></div>
+
+  <ul>
+      <li>Status: <span id="login-status">Not logged in</span>
+          | <a href="#" id="btnLogin" class="btn btn-success" >Login</a>
+          | <a href="#" id="btnLogout" class="btn btn-danger">Log out</a>
+      </li>
+      <span> You'll need to log in first </span> <br/>
+      <li><a href="#" id="btnSelect9" class="btn btn-info run disabled active" role="button">Select friend - auto</a> </li>
+      <li><a href="#" id="btnSelect1" class="btn btn-info run disabled" role="button">Select friend - touch</a> </li>
+      <li><a href="#" id="btnSelect2" class="btn btn-info run disabled" role="button">Select friend - popup</a> </li>
+      <li><a href="#" id="btnSelect3" class="btn btn-info run disabled" role="button">Select friend - dialog</a> </li>
+      <li><a href="#" id="btnSelect4" class="btn btn-info run disabled" role="button">Select friend - iframe</a> </li>
+      <li><a href="#" id="btnSelect5" class="btn btn-info run disabled" role="button">Select friend - page</a> </li>
+
+  </ul>
+  <div id="results">
+      <p>ACTIVITY LOG</p>
+  </div>
+
+  <!-- Markup for These Days Friend Selector -->
+
+  <div id="FBShareDialog">
+      <div class="FBShareDialog_dialog">
+          <a href="#" id="FBShareDialog_buttonClose" class="FBShareDialog_button">
+              <span class="visible-xs">Cancel</span>
+              <span class="hidden-xs">&times;</span>
+          </a>
+          <a href="#" id="FBShareDialog_buttonOK" class="FBShareDialog_button visible-xs">Share</a>
+          <div class="FBShareDialog_form">
+              <div class="FBShareDialog_header">
+                  <p>Post to wall</p>
+              </div>
+              <div class="FBShareDialog_content">
+                  <div class="FBShareDialog_searchContainer FBShareDialog_clearfix">
+                      <span class="FBShareDialog_selectedNameContainer">Please make your choice</span>
+                      <input type="text" placeholder="Search friends" id="FBShareDialog_searchField" />
+                  </div>
+                  <div class="FBShareDialog_friendsContainer"></div>
+                  <div class="FBShareDialog_Iframe hidden-xs">
+                      <div class="FBShareDialog_Iframe_loading" >
+                          <img src="/img/loading.gif" alt="Loading ..." />
+                          <iframe id="Iframe" width="100%" height="310px" frameborder="no" seamless=""></iframe>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/fbsharedialog.js/example.js"></script>
+  </body>
+</html>
