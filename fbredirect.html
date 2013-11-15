@@ -33,7 +33,7 @@
             if (parsedURI.post_id) {
                 document.write();
                 window.parent.$(parsedURI.idDialog + ' iframe')
-                    .trigger('TD:iframe', {status    : 'posted',
+                    .trigger('FBShareDialog:iframe', {status    : 'posted',
                         fb_answer : {post_id : parsedURI.post_id}
                     });
             } else {

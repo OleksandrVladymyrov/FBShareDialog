@@ -15,7 +15,7 @@
         <?php if(isset($_GET['idDialog'])) :?>
             <?php if(isset($_GET['post_id'])) :?>
                 window.parent.$('<?= $_GET['idDialog'] ?> iframe')
-                    .trigger('TD:iframe', {status    : 'posted',
+                    .trigger('FBShareDialog:iframe', {status    : 'posted',
                                            fb_answer : {post_id : '<?= $_GET['post_id']?>'}
                                           });
             <?php else : ?>
