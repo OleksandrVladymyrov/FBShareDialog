@@ -67,12 +67,14 @@ Just edit `example.js` and set your Facebook `appId`.
 ![This is what it looks like.](http://oleksandrvladymyrov.github.io/FBShareDialog/pic/dialog.png)
 
 7 - Events
+
     Library exposes a few events for hooking into modal functionality.
 
     Event Type	                    : Description
     FBShareDialog:share 	        : This event fires immediately when the answer from FaceBook received.
     FBShareDialog:friendSelected	: This event is fired when friend selected.
     FBShareDialog:friendUnselected	: This event is fired when friend unselected.
+
 
 
     $("#FBShareDialog").on('FBShareDialog:share', function (e, eventInfo){
@@ -88,6 +90,7 @@ Just edit `example.js` and set your Facebook `appId`.
     });
 
 8 - CallBacks
+
    The library provides the opportunity to interact through a callback function
 
 - callbackFriendSelected
@@ -96,11 +99,13 @@ Just edit `example.js` and set your Facebook `appId`.
 - callbackCancel
 
 9 - Using fbredirect.html and fbredirect.php
+
     They are required(one of them on Your choice) to return control to Your application after share story to FaceBook's wall at desktop design.
 
 10 - Parameters
+
      You can specify all parameters that support ["Feed and Share Dialogs"] (https://developers.facebook.com/docs/reference/dialogs/feed/).
-     If you don't specify the 'display' property or set `auto` than in desktop design will be applied `iframe` display type and `touch` in mobile as well. You can also force the popup or page or dialog or iframe or touch types, if necessary.
+     If you don't specify the 'display' property or set `auto` than in desktop design will be applied `iframe` display type and `touch` in mobile as well. You can also force the `popup` or `page` or `dialog` or `iframe` or `touch` display types, if necessary.
 
 
 ## Thanks
