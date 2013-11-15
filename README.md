@@ -30,7 +30,7 @@ Just edit `example.js` and set your Facebook `appId`.
 
 - Include jQuery in your document. We are considering making this plugin library independent, but currently jQuery is required.
 - Include the Facebook [JavaScript SDK](http://developers.facebook.com/docs/reference/javascript/). (Technically, this step is optional. We have provided a `setFriends` function if you have loaded the friends on the serverside and want to avoid the JavaScript SDK.)
-- Include Bootstrap in your document. We are considering making this plugin library independent, but currently Bootstrap is required.
+- Include [Bootstrap](http://getbootstrap.com/) in your document. We are considering making this plugin library independent, but currently Bootstrap is required.
 - Include `fbsharedialog.js`.
 - Optional: We are using an HTML5 placeholder attribute on the search field. If you want the placeholder to work in older browsers, include a [placeholder polyfill](https://github.com/mathiasbynens/Placeholder-jQuery-Plugin).
 - Note: we haven't minified the script for you but you might like to [minify it](http://refresh-sf.com/yui/) and concatenate it into a single file with your other plugins.
@@ -69,10 +69,11 @@ Just edit `example.js` and set your Facebook `appId`.
 7 - Events
     Library exposes a few events for hooking into modal functionality.
 
-    Event Type	Description
-    FBShareDialog:share 	This event fires immediately when the answer from FaceBook received.
-    FBShareDialog:friendSelected	This event is fired when friend selected.
-    FBShareDialog:friendUnselected	This event is fired when friend unselected.
+    Event Type	                    : Description
+
+   - FBShareDialog:share 	        : This event fires immediately when the answer from FaceBook received.
+   - FBShareDialog:friendSelected	: This event is fired when friend selected.
+   - FBShareDialog:friendUnselected	: This event is fired when friend unselected.
 
 
     $("#FBShareDialog").on('FBShareDialog:share', function (e, eventInfo){
@@ -90,11 +91,11 @@ Just edit `example.js` and set your Facebook `appId`.
 8- CallBacks
    The library provides the opportunity to interact through a callback function
 
-- callbackFriendSelected   :
-- callbackFriendUnselected :
-- callbackSubmit           :
-- callbackCancel           :
+- callbackFriendSelected
+- callbackFriendUnselected
+- callbackSubmit
+- callbackCancel
 
 ## Thanks
 
-This library was write on [These Days Labs Facebook-friend-selector](https://github.com/thesedays/Facebook-friend-selector) base.
+This library was wrote on [These Days Labs Facebook-friend-selector](https://github.com/thesedays/Facebook-friend-selector) base.
