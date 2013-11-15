@@ -2,7 +2,7 @@
 <html>
 <head>
     <title></title>
-    <script src="/js/jquery/jquery.js" ></script>
+    <script src="js/jquery/jquery.js" ></script>
 </head>
 <body>
 
