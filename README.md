@@ -68,26 +68,35 @@ Just edit `example.js` and set your Facebook `appId`.
 
 7 - Events
 
-    Library exposes a few events for hooking into modal functionality.
+Library exposes a few events for hooking into modal functionality.
 
-    Event Type	                    : Description
-    FBShareDialog:share 	        : This event fires immediately when the answer from FaceBook received.
-    FBShareDialog:friendSelected	: This event is fired when friend selected.
-    FBShareDialog:friendUnselected	: This event is fired when friend unselected.
+<table>
+  <tr>
+    <th> </th><th>Event Type</th><th>Description</th>
+  </tr>
+  <tr>
+    <td>1</td><td>FBShareDialog:share</td><td>This event fires immediately when the answer from FaceBook received</td>
+  </tr>
+  <tr>
+    <td>2</td><td>FBShareDialog:friendSelected</td><td>This event is fired when friend selected</td>
+  </tr>
+  <tr>
+    <td>3</td><td>FBShareDialog:friendUnselected</td><td>This event is fired when friend unselected</td>
+  </tr>
+</table>
 
 
 
-    $("#FBShareDialog").on('FBShareDialog:share', function (e, eventInfo){
+     $("#FBShareDialog").on('FBShareDialog:share', function (e, eventInfo){
+        // do something…
+    });
+     $("#FBShareDialog").on('FBShareDialog:friendSelected', function (e, eventInfo){
+        // do something…
+     });
+     $("#FBShareDialog").on('FBShareDialog:friendUnselected', function (e, eventInfo){
         // do something…
     });
 
-    $("#FBShareDialog").on('FBShareDialog:friendSelected', function (e, eventInfo){
-        // do something…
-    });
-
-    $("#FBShareDialog").on('FBShareDialog:friendUnselected', function (e, eventInfo){
-        // do something…
-    });
 
 8 - CallBacks
 
@@ -100,12 +109,12 @@ Just edit `example.js` and set your Facebook `appId`.
 
 9 - Using fbredirect.html and fbredirect.php
 
-    They are required(one of them on Your choice) to return control to Your application after share story to FaceBook's wall at desktop design.
+ They are required(one of them on Your choice) to return control to Your application after share story to FaceBook's wall at desktop design.
 
 10 - Parameters
 
-     You can specify all parameters that support ["Feed and Share Dialogs"] (https://developers.facebook.com/docs/reference/dialogs/feed/).
-     If you don't specify the 'display' property or set `auto` than in desktop design will be applied `iframe` display type and `touch` in mobile as well. You can also force the `popup` or `page` or `dialog` or `iframe` or `touch` display types, if necessary.
+ You can specify all parameters that support [Feed and Share Dialogs](https://developers.facebook.com/docs/reference/dialogs/feed/).
+If you don't specify the 'display' property or set `auto` than in desktop design will be applied `iframe` display type and `touch` in mobile as well. You can also force the `popup` or `page` or `dialog` or `iframe` or `touch` display types, if necessary.
 
 
 ## Thanks
