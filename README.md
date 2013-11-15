@@ -10,7 +10,7 @@ It is similar to the `fb:multi-friend-selector` component by Facebook, except it
 
 ## Viewing the example
 
-You can view the example at [These Days Labs](http://playground.thesedays.com/tdfriendselector/), or you can check out this repository and run it yourself. You'll need to put the files on a web server - Facebook apps won't run off the local file system.
+You can view the example at [page](http://oleksandrvladymyrov.github.io/FBShareDialog/), or you can check out this repository and run it yourself. You'll need to put the files on a web server - Facebook apps won't run off the local file system.
 
 Just edit `example.js` and set your Facebook `appId`.
 
@@ -60,7 +60,41 @@ Just edit `example.js` and set your Facebook `appId`.
 
 5 - According to the dimension(width) of browser's window there are two options of design. We called it desktop and mobile. The desktop design will automatically deployed with width of browser's window >=768px otherwise will be deployed mobile design. The mobile design is oriented to use with touchscreen interface, but can be used on desktop as well.
 
-Desktop design                      Mobile design
 ![This is what it looks like.](http://oleksandrvladymyrov.github.io/FBShareDialog/pic/design.png)
 
-6 - 
+6 - According to design, the library propose different types of the share dialog
+
+![This is what it looks like.](http://oleksandrvladymyrov.github.io/FBShareDialog/pic/dialog.png)
+
+7 - Events
+    Library exposes a few events for hooking into modal functionality.
+
+    Event Type	Description
+    FBShareDialog:share 	This event fires immediately when the answer from FaceBook received.
+    FBShareDialog:friendSelected	This event is fired when friend selected.
+    FBShareDialog:friendUnselected	This event is fired when friend unselected.
+
+
+    $("#FBShareDialog").on('FBShareDialog:share', function (e, eventInfo){
+        // do something…
+    });
+
+    $("#FBShareDialog").on('FBShareDialog:friendSelected', function (e, eventInfo){
+        // do something…
+    });
+
+    $("#FBShareDialog").on('FBShareDialog:friendUnselected', function (e, eventInfo){
+        // do something…
+    });
+
+8- CallBacks
+   The library provides the opportunity to interact through a callback function
+
+- callbackFriendSelected   :
+- callbackFriendUnselected :
+- callbackSubmit           :
+- callbackCancel           :
+
+## Thanks
+
+This library was write on [These Days Labs Facebook-friend-selector](https://github.com/thesedays/Facebook-friend-selector) base.
