@@ -125,7 +125,8 @@ var FBShareDialog = (function(module, $) {
 			callbackSubmit           : null,
             callbackCancel           : null,
             app_id                   : 0,
-            redirect_uri             : window.location.protocol + '//' + window.location.host + '/fbredirect.html?idDialog=' + encodeURIComponent(settings.containerSelector),
+            redirect_uri             : window.location.protocol + '//' + window.location.host + window.location.pathname
+                                       +'fbredirect.html?idDialog=' + encodeURIComponent(settings.containerSelector),
             display                  : 'auto',
             link                     : null,
             picture                  : null,
