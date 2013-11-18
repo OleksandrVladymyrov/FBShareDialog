@@ -1,18 +1,18 @@
 FBShareDialog
 =============
 
-A JavaScript plugin to share stories to facebook's wall
+A JavaScript plugin to share stories to Facebook's wall
 
-This is an interface component for websites and facebook applications which allows your users to make a selection of one of their friend or themself to share stories on the wall. The friend is returned as an array of facebook ID, the post_id is returned as an object after successful post.
+This is an interface component for websites and Facebook applications which allows your users to make a selection of one of their friend or themself to share stories on the wall. The friend is returned as an array of Facebook ID, the post_id is returned as an object after successful post.
 
 
 ![This is what it looks like.](http://oleksandrvladymyrov.github.io/FBShareDialog/pic/design.png)
 
 ## Viewing the example
 
-You can view the example at [page](http://oleksandrvladymyrov.github.io/FBShareDialog/), or you can check out this repository and run it yourself. You'll need to put the files on a web server - facebook apps won't run off the local file system.
+You can view the example at [page](http://oleksandrvladymyrov.github.io/FBShareDialog/), or you can check out this repository and run it yourself. You'll need to put the files on a web server - Facebook apps won't run off the local file system.
 
-Just edit `example.js` and set your facebook `appId`.
+Just edit `example.js` and set your Facebook `appId`.
 
 ## Using the plugin
 
@@ -29,7 +29,7 @@ Just edit `example.js` and set your facebook `appId`.
 ### Include required JavaScript
 
 - Include jQuery in your document.
-- Include the facebook [JavaScript SDK](http://developers.facebook.com/docs/reference/javascript/). (Technically, this step is optional. We have provided a `setFriends` function if you have loaded the friends on the serverside and want to avoid the JavaScript SDK.)
+- Include the Facebook [JavaScript SDK](http://developers.facebook.com/docs/reference/javascript/). (Technically, this step is optional. We have provided a `setFriends` function if you have loaded the friends on the serverside and want to avoid the JavaScript SDK.)
 - Include [Bootstrap](http://getbootstrap.com/) in your document.
 - Include `fbsharedialog.js`.
 - Optional: We are using an HTML5 placeholder attribute on the search field. If you want the placeholder to work in older browsers, include a [placeholder polyfill](https://github.com/mathiasbynens/Placeholder-jQuery-Plugin).
@@ -37,10 +37,10 @@ Just edit `example.js` and set your facebook `appId`.
 
 ### The fun stuff (using the plugin)
 
-1 - Create a facebook application, as shown below.
+1 - Create a Facebook application, as shown below.
 ![This is what it looks like.](http://oleksandrvladymyrov.github.io/FBShareDialog/pic/facebook_app.png)
 
-1.1 - Make sure your user has authenticated your facebook app.
+1.1 - Make sure your user has authenticated your Facebook app.
 
 2 - Initialise the plugin. Here you can set options like toggling debug messages, your preferred classnames, etc.
 
@@ -54,7 +54,7 @@ Just edit `example.js` and set your facebook `appId`.
 		}
 	});
 
-4 - Display the plugin instance when you need it. The plugin will automatically load the facebook friends of the logged in user (and they will be cached and reused across all instances on the page).
+4 - Display the plugin instance when you need it. The plugin will automatically load the Facebook friends of the logged in user (and they will be cached and reused across all instances on the page).
 
 	$("#btnSelect1").click(function (e) {
 		e.preventDefault();
@@ -78,7 +78,7 @@ Library exposes a few events for hooking into modal functionality.
     <th> </th><th>Event Type</th><th>Description</th>
   </tr>
   <tr>
-    <td>1</td><td>FBShareDialog:share</td><td>This event fires immediately when the answer from faceBook received</td>
+    <td>1</td><td>FBShareDialog:share</td><td>This event fires immediately when the answer from Facebook received</td>
   </tr>
   <tr>
     <td>2</td><td>FBShareDialog:friendSelected</td><td>This event is fired when friend selected</td>
@@ -112,7 +112,7 @@ Library exposes a few events for hooking into modal functionality.
 
 9 - Using fbredirect.html and fbredirect.php
 
- They are required(one of them on your choice) to return control to your application after share story to faceBook's wall at desktop design.
+ They are required(one of them on your choice) to return control to your application after share story to Facebook's wall at desktop design.
 
 10 - Parameters
 
