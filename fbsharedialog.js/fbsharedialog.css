@@ -98,13 +98,12 @@
 
     background: #738aba; /* Old browsers */
     background: -moz-linear-gradient(top, #738aba 0%, #2c4987 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#738aba), color-stop(100%,#2c4987)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #738aba 0%,#2c4987 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #738aba 0%,#2c4987 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #738aba 0%,#2c4987 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #738aba 0%,#2c4987 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#738aba', endColorstr='#2c4987',GradientType=0 ); /* IE6-9 */
-
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #738aba), color-stop(100%, #2c4987)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #738aba 0%, #2c4987 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #738aba 0%, #2c4987 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #738aba 0%, #2c4987 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #738aba 0%, #2c4987 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#738aba', endColorstr='#2c4987', GradientType=0); /* IE6-9 */
 
     border-bottom: 1px solid;
     border-color: rgb(17, 26, 51);
@@ -216,6 +215,7 @@
         max-width: 450px;
         margin: 0 auto;
     }
+
     #FBShareDialog .FBShareDialog_dialog .FBShareDialog_friendsContainer {
         display: block !important;
         height: 10000px;
@@ -224,13 +224,13 @@
     #FBShareDialog .FBShareDialog_dialog .FBShareDialog_button {
 
         background: #647aab; /* Old browsers */
-        background: -moz-linear-gradient(top,  #647aab 0%, #2c467e 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#647aab), color-stop(100%,#2c467e)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  #647aab 0%,#2c467e 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  #647aab 0%,#2c467e 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  #647aab 0%,#2c467e 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  #647aab 0%,#2c467e 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#647aab', endColorstr='#2c467e',GradientType=0 ); /* IE6-9 */
+        background: -moz-linear-gradient(top, #647aab 0%, #2c467e 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #647aab), color-stop(100%, #2c467e)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #647aab 0%, #2c467e 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #647aab 0%, #2c467e 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #647aab 0%, #2c467e 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #647aab 0%, #2c467e 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#647aab', endColorstr='#2c467e', GradientType=0); /* IE6-9 */
 
         box-shadow: rgba(0, 0, 0, 0.21) 0px 1px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 0px 0px;
         box-sizing: border-box;
@@ -273,7 +273,7 @@
 
 @media (min-width:768px) {
     #FBShareDialog {
-        margin: 10px 0 ;
+        margin: 10px 0;
     }
 
     #FBShareDialog .FBShareDialog_dialog {
